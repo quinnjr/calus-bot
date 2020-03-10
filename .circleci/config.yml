@@ -1,0 +1,52 @@
+version: 2.1
+
+commands:
+  setup-sccache:
+    steps:
+      - run:
+          name: Install sccache
+          command: |
+            cargo install sccache
+            echo 'export "RUSTC_WRAPPER"="sccache"' >> $BASH_ENV
+            echo 'export "SCCACHE_CACHE_SIZE"="1G"' >> $BASH_ENV
+            sccache --version
+  restore-sccache-cache:
+    steps:
+      - restore_cache:
+          name: Restore sccache cache
+          key: sccache-cache-stable-{{ arch }}-{{ .Environment.CIRCLE_JOB }}
+  save-sccache-cache:
+    steps:
+      - save_cache:
+          name: Save sccache cache
+          key: sccache-cache-stable-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-{{ epoch }}
+          paths:
+            - "~/.cache/sccache"
+
+jobs:
+  test:
+    docker:
+      - image: circleci/rust:latest
+    steps:
+      - checkout
+      - setup-sccache
+      - restore-sccache-cache
+      - run:
+          name: Version information
+          command: rustc --version; cargo --version; rustup --version
+      - run:
+          name: Calculate dependencies
+          command: cargo generate-lockfile
+      - run:
+          name: Build all targets
+          command: cargo build --all --all-targets --release
+      - run:
+          name: Run all tests
+          command: cargo test --all
+      - save-sccache-cache
+
+workflows:
+  version: 2
+  run-tests:
+    jobs:
+      - test

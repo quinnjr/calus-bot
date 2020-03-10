@@ -1,0 +1,30 @@
+[package]
+name = "calus-bot"
+description = "Calus-bot for Destiny: Adding Opulence to your server; Grow fat from bot commands!"
+version = "0.1.0"
+authors = ["Joseph R. Quinn <quinn.josephr@protonmail.com>"]
+edition = "2018"
+homepage = "https://calus-bot.github.io"
+repository = "https://github.com/quinnjr/calus-bot"
+publish = false
+keywords = ["destiny", "destiny 2", "discord", "bot", "calus", "opulence"]
+license = "ISC"
+
+[badges]
+maintenance = { status = "actively-developed" }
+circle-ci = { respository = "quinnjr/calus-bot", branch = "master" }
+is-it-maintained-issue-resolution = { repository = "quinnjr/calus-bot" }
+is-it-maintained-open-issues = { repository = "quinnjr/calus-bot" }
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace]
+
+
+[dependencies]
+actix = "0.9.0"
+actix-rt = "1.0.0"
+actix-web = "2.0.0"
+futures = "0.3.4"
+lazy_static = "1.4.0"
+chrono = "0.4.11"

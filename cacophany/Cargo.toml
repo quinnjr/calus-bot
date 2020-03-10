@@ -1,0 +1,57 @@
+[package]
+name = "cacophany"
+description = """
+"""
+version = "0.1.0"
+authors = ["Joseph R. Quinn <quinn.josephr@protonmail.com>"]
+edition = "2018"
+homepage = "https://github.com/quinnjr/cacophany"
+repository = "https://github.com/quinnjr/cacophany.git"
+readme = "README.md"
+keywords = ["cacophany", "discord", "bot", "websocket"]
+license = "ISC"
+
+[package.metadata.docs.rs]
+default-target= "x86_64-unknown-linux-musl"
+
+[badges]
+travis-ci = { repository = "quinnjr/cacophany", branch = "master" }
+is-it-maintained-issue-resolution = { repository = "quinnjr/cacophany" }
+maintenance = { status = "actively-developed" }
+
+[lib]
+test = true
+doctest = true
+bench = false
+doc = true
+
+[dependencies]
+base64 = "0.10.1"
+bitflags = "1.2.0"
+byteorder = "1.3.2"
+chrono = { version = "0.4.9", features = ["serde"] }
+derive_builder = "0.8.0"
+derive-new = "0.5.8"
+dotenv = "0.14.1"
+failure = "0.1.5"
+flate2 = "1.0.12"
+futures = "0.1.29"
+h2 = "0.1.26"
+http = "0.1.18"
+itoa = "0.4.4"
+lazy_static = "1.4.0"
+log = "0.4.8"
+log-derive = "0.3.1"
+regex = "1.3.1"
+rustls = "0.16.0"
+serde = { version = "1.0.101", features = ["derive"] }
+serde_json = "1.0.41"
+serde_repr = "0.1.5"
+shrinkwraprs = "0.2.1"
+threadpool = "1.7.1"
+time = "0.1.42"
+tokio = "0.1.22"
+tungstenite = "0.9.1"
+url = "2.1.0"
+actix = "0.8.3"
+actix-web = "1.0.9"

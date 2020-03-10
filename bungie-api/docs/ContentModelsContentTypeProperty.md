@@ -1,0 +1,51 @@
+# ContentModelsContentTypeProperty
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** |  | [optional] [default to null]
+**root_property_name** | **String** |  | [optional] [default to null]
+**readable_name** | **String** |  | [optional] [default to null]
+**value** | **String** |  | [optional] [default to null]
+**property_description** | **String** |  | [optional] [default to null]
+**localizable** | **bool** |  | [optional] [default to null]
+**fallback** | **bool** |  | [optional] [default to null]
+**enabled** | **bool** |  | [optional] [default to null]
+**order** | **i32** |  | [optional] [default to null]
+**visible** | **bool** |  | [optional] [default to null]
+**is_title** | **bool** |  | [optional] [default to null]
+**required** | **bool** |  | [optional] [default to null]
+**max_length** | **i32** |  | [optional] [default to null]
+**max_byte_length** | **i32** |  | [optional] [default to null]
+**max_file_size** | **i32** |  | [optional] [default to null]
+**regexp** | **String** |  | [optional] [default to null]
+**validate_as** | **String** |  | [optional] [default to null]
+**rss_attribute** | **String** |  | [optional] [default to null]
+**visible_dependency** | **String** |  | [optional] [default to null]
+**visible_on** | **String** |  | [optional] [default to null]
+**datatype** | **i32** |  | [optional] [default to null]
+**attributes** | **::std::collections::HashMap<String, String>** |  | [optional] [default to null]
+**child_properties** | [**Vec<::models::ContentModelsContentTypeProperty>**](Content.Models.ContentTypeProperty.md) |  | [optional] [default to null]
+**content_type_allowed** | **String** |  | [optional] [default to null]
+**bind_to_property** | **String** |  | [optional] [default to null]
+**bound_regex** | **String** |  | [optional] [default to null]
+**representation_selection** | **::std::collections::HashMap<String, String>** |  | [optional] [default to null]
+**default_values** | [**Vec<::models::ContentModelsContentTypeDefaultValue>**](Content.Models.ContentTypeDefaultValue.md) |  | [optional] [default to null]
+**is_external_allowed** | **bool** |  | [optional] [default to null]
+**property_section** | **String** |  | [optional] [default to null]
+**weight** | **i32** |  | [optional] [default to null]
+**entitytype** | **String** |  | [optional] [default to null]
+**is_combo** | **bool** |  | [optional] [default to null]
+**suppress_property** | **bool** |  | [optional] [default to null]
+**legal_content_types** | **Vec<String>** |  | [optional] [default to null]
+**representation_validation_string** | **String** |  | [optional] [default to null]
+**min_width** | **i32** |  | [optional] [default to null]
+**max_width** | **i32** |  | [optional] [default to null]
+**min_height** | **i32** |  | [optional] [default to null]
+**max_height** | **i32** |  | [optional] [default to null]
+**is_video** | **bool** |  | [optional] [default to null]
+**is_image** | **bool** |  | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
